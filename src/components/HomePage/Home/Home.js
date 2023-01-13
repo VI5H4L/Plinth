@@ -16,8 +16,9 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
 
-function Home() {
+function Home({auth,setAuth}) {
   //Particle Bg
   const particlesInit = useCallback(async (engine) => {
     // console.log(engine);
@@ -49,7 +50,7 @@ function Home() {
   const [tl2] = useState(new TimelineLite({ paused: false }));
   const [tl3] = useState(new TimelineLite({ paused: false }));
   const [tl4] = useState(new TimelineLite({ paused: false }));
-  
+  const navigate =useNavigate();
   useEffect(() => {
     // console.log(item);
 
@@ -115,7 +116,14 @@ function Home() {
     };
 
     const fetchData = () => {
-      window.open(`http://localhost:3000/auth/google`, "_self");
+      if(auth==="false"){
+        navigate("/registration")
+        console.log("navigated")
+      }
+      else{
+        navigate("/competitions")
+      }
+      
     };
 
 

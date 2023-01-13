@@ -6,24 +6,8 @@ function Contact() {
     const contact = 
     [
         {
-            name:"Ketan Jakkar",
-            phone: "+91 94617 21651",
-            email:"19ucc020@lnmiit.ac.in",
-        },
-        {
-            name:"Meet Patel",
-            phone: "+91 70418 13479",
-            email:"19ume020@lnmiit.ac.in",
-        },
-        {
-            name:"Viren Saroha",
-            phone: "+91 93065 55214",
-            email:"19ucc020@lnmiit.ac.in",
-        },
-        {
-            name:"Vinay Sharma",
-            phone: "+91 95491 78651",
-            email:"19ume011@lnmiit.ac.in",
+            name:"LNM Hacks 5.0",
+            email:"info@lnmhacks.xyz",
         },
     ]
     return (
@@ -32,7 +16,6 @@ function Contact() {
             <div className={styles.contact}>
                 <div className={styles.nameNumber}>
                     <div className={styles.name}>{contact.name}</div>
-                    <div className={styles.number}>{contact.phone}</div>
                 </div>
                 <div className = {styles.mail}>
                     <a href={`https://mail.google.com/mail/?view=cm&fs=1&to= ${contact.email}`} target = "_blank">

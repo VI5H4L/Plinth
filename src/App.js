@@ -1,37 +1,62 @@
 import "./App.css";
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import Home from "./components/HomePage/Home/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader/Loader";
-import Aboutus from "./components/About/About";
-import Contactus from "./components/ContactUs/Contactus";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Competitions from "./components/Competitions/Competitions";
-import Reg from "./components/Registration/Reg";
-
-import Explore from "./components/Explore/Explore"
-import CreateTeam from "./components/CreateTeam/CreateTeam";
-import Team from "./components/OurTeam/Team/Team";
-import CampusAmb from "./components/CampusAmb/CampusAmb";
-import LnmHacks from "./components/LnmHacks/LnmHacks";
-
-
 import axios from "axios";
-console.log(process.env.REACT_APP_API_URL)
+// import CreateTeam from "./components/CreateTeam/CreateTeam";
+import Payment from "./components/Payments/Payment";
+
+const Aboutus = lazy(()=>import("./components/About/About"));
+const Admin = lazy(()=>import("./components/Admin/Admin"));
+const Komet = lazy(()=>import("./components/Komet/Komet"));
+const Sidebar = lazy(()=>import("./components/Sidebar/Sidebar"));
+const Competitions = lazy(()=>import("./components/Competitions/Competitions"));
+const Reg = lazy(()=>import("./components/Registration/Reg"));
+const Explore = lazy(()=>import("./components/Explore/Explore"));
+const Team = lazy(()=>import("./components/OurTeam/Team/Team"));
+const CampusAmb = lazy(()=>import("./components/CampusAmb/CampusAmb"));
+const LnmHacks = lazy(()=>import("./components/LnmHacks/LnmHacks"));
+const Login = lazy(()=>import("./components/Login/Login"));
+const Accomodation = lazy(()=>import("./components/Accomodation/Accomodation"));
+
+
+console.log(process.env.REACT_APP_API_URL);
+const serverSystemUrl="https://api.plinth.co.in";
 function App() {
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState(null);
-  const getUser = async () => {
-    try {
-      const url = `http://localhost:3000/auth/google`;
-      const { data } = await axios.get(url, { withCredentials: true });
-      setUser(data.user._json);
-      console.log(data);
-    } catch (err) {
-      console.log(err, "hi");
-    }
-  };
+  const [auth, setAuth] = useState("false");
+  const [userId,setUserId]=useState(null)
+  const [accomodation,setAccomodation]=useState(false)
+  // const getUser = async () => {
+  //   try {
+  //     const url = `http://localhost:3000/auth/google`;
+  //     const { data } = await axios.get(url, { withCredentials: true });
+  //     setUser(data.user._json);
+  //     console.log(data);
+  //   } catch (err) {
+  //     console.log(err, "hi");
+  //   }
+  // };
+
+  useEffect(() => { 
+    axios
+    .get(`${serverSystemUrl}/`, {
+      validateStatus: false,
+      withCredentials: true,
+    })
+    .then((response) => {
+      console.log("---------", response);
+      if (response.status == 200) {
+        setAuth(response.data.user.role);
+        setUserId(response.data.user.user_id)
+        setAccomodation(response.data.user.accomodation)
+        console.log("==accomodation-",response.data.user.accomodation);
+      }
+    });
+  }, [auth])
+  
   useEffect(() => {
     // console.log((user));
     setLoading(true);
@@ -41,23 +66,34 @@ function App() {
     // console.log(loading);
   }, []);
 
+  console.log(auth);
+
   return (
     <div className="App">
         <Router>
-          <Sidebar/>
+          <Sidebar auth = {auth} setAuth={setAuth} serverSystemUrl={serverSystemUrl} setUser={setUserId}/>
+
+          <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             <Route path="/" element={loading ? (
         <Loader />
-      ) :<Home />} />
-            <Route path="aboutus" element={<Aboutus />} />
+      ) :<Home auth={auth} setAuth={setAuth} />} />
+            <Route path="aboutus" element={<Aboutus  />} />
             <Route path="ourteam" element={<Team />} />
-            <Route path="competitions" element={<Competitions />} />
-            <Route path="/:name" element={<Explore />}/>
-            <Route path="/:name/registration" element={<Reg />}/>
-            <Route path="campus_ambassador" element={<CampusAmb />} />
-            <Route path="lnm_hacks" element={<LnmHacks />} />
+            <Route path="/admin" element={(auth==="admin") && (<Admin serverSystemUrl={serverSystemUrl}/>)} />
+            <Route path="komet" element={<Komet />} />
+            <Route path="competitions" element={<Competitions auth={auth} setAuth={setAuth}/>} />
+            <Route path="accomodation" element={<Accomodation auth={auth} />} />
+            <Route path="/:name" element={<Explore auth={auth} setAuth={setAuth}/>}/>
+            {(auth==="false")&&<Route path="/registration" element={<Reg auth={auth} setAuth={setAuth} serverSystemUrl={serverSystemUrl}/>}/>
+            }<Route path="campus_ambassador" element={<CampusAmb auth={auth} setAuth={setAuth}/>} />
+            <Route path="lnm_hacks" element={<LnmHacks auth={auth} setAuth={setAuth} />} />
+            {(auth==="false")&&(<Route path="/login" element={<Login auth={auth} setAuth={setAuth} serverSystemUrl={serverSystemUrl}/>}/>
+            )}
+            <Route path="/payments/:eventname"  element={auth==="false"?<Login auth={auth} setAuth={setAuth} serverSystemUrl={serverSystemUrl}/>:<Payment userid={userId} accomodation={accomodation} auth={auth} setAuth={setAuth} url={serverSystemUrl}/>} />
             {/* <Route path="create-team" element={<CreateTeam/>} /> */}
           </Routes>
+          </Suspense>
 
         </Router>
         

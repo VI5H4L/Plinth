@@ -13,7 +13,7 @@ import { motion } from "framer-motion/dist/framer-motion";
 import { Handles } from "../HomePage/PlinthHandlesSection/Handles";
 import Contact from "./Contacts/Contact";
 
-const CampusAmb = () => {
+const CampusAmb = ({auth,setAuth}) => {
   const [section, setSection] = useState("about");
   const [val, setVal] = useState("A part  time opportunity for the students to cater a large crowd in various fields like programming, gaming, MUN etc.  The program provides occassions for networking and building connections. ");
   const handleView = (e) => {
@@ -31,7 +31,7 @@ const CampusAmb = () => {
       setSection("structure");
 
     } else if (id === "timeline") {
-      setVal("Registartion Deadline: 15th January 2023");
+      setVal("Registration Deadline: 15th January 2023");
       setSection("timeline");
 
     } else if (id === "prizes") {
@@ -167,6 +167,7 @@ const CampusAmb = () => {
                 className={styles.explore_image}
                 onMouseEnter={cardEnter} onMouseLeave={textLeave}
                 src={"https://drive.google.com/uc?export=view&id=".concat("https://drive.google.com/file/d/1sUvoVdmNWaRNR-3wEUChQUMWa-FIi8HX/view?usp=share_link".split('/d/').pop().split('/view')[0])}
+                // src = "./images/events/astronomy/astrohunt/poster.jpg"
                 alt="Campus Ambassador Program Poster"
                 effect="blur"
                 height="100%"
@@ -226,8 +227,7 @@ const CampusAmb = () => {
               <div className={styles.explore_description}><div onMouseEnter={btnEnter} onMouseLeave={textLeave}>{val}</div></div>
             </div>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf22WYYU0_e9R-GnHkv8XN4FBVdeXinJDSjj-li9Q-wjcAEHA/viewform" target="_blank">
-
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf22WYYU0_e9R-GnHkv8XN4FBVdeXinJDSjj-li9Q-wjcAEHA/viewform" target="_blank" rel="noopener noreferrer">
               <button
                 className={styles.event_register_button}
                 onMouseEnter={btnEnter} onMouseLeave={textLeave}

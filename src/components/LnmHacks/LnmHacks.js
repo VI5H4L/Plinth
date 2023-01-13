@@ -13,7 +13,7 @@ import { motion } from "framer-motion/dist/framer-motion";
 import { Handles } from "../HomePage/PlinthHandlesSection/Handles";
 import Contact from "./Contacts/Contact";
 
-const LnmHacks = () => {
+const LnmHacks = ({auth,setAuth}) => {
   const [section, setSection] = useState("about");
   const [val, setVal] = useState("LNMHacks 5.0 will be a 72-hour hackathon with a wide range of tracks in Blockchain field such as DeFi, DAOs, NFTs and Gaming, LNMHacks is expecting the participation of innovators and developers from all over the nation.");
   const handleView = (e) => {
@@ -22,15 +22,15 @@ const LnmHacks = () => {
       setVal(<Contact/>);
       setSection("contact");
     } else if (id === "about") {
-      setVal("LNMHacks 5.0 will be a 72-hour hackathon with a wide range of tracks in Blockchain field such as DeFi, DAOs, NFTs and Gaming, LNMHacks is expecting the participation of innovators and developers from all over the nation.");
+      setVal("LNMHacks 5.0, a 72-hour hackathon with a wide range of tracks in Blockchain field such as DeFi, DAOs, NFTs and Gaming, LNMHacks is expecting the participation of innovators and developers from all over the nation.");
       setSection("about");
 
     } else if (id === "structure") {
-      setVal("Will be revealed Soon!!");
+      setVal("Revealing soon!!");
       setSection("structure");
 
     } else if (id === "timeline") {
-      setVal("LNM Hcaks 5.0 will take place between 27th Jnauary, 2023 and 29th January, 2023. ");
+      setVal("LNM Hacks 5.0 will take place between 27th January, 2023 and 29th January, 2023. ");
       setSection("timeline");
 
     } else if (id === "prizes") {
@@ -174,12 +174,12 @@ const LnmHacks = () => {
               />
             </div>
 
-            <a href="https://drive.google.com/file/d/128GmI_5PjP_C94mgr77mPYrvVkzCpKMs/view?usp=sharing"><button
+            {/* <a href="https://drive.google.com/file/d/128GmI_5PjP_C94mgr77mPYrvVkzCpKMs/view?usp=sharing"><button
                 className={styles.event_register_button1}
                  onMouseEnter={btnEnter} onMouseLeave={textLeave}
               >
                 Brochure
-              </button></a>
+              </button></a> */}
           </motion.div>
 
           <motion.div variants={variants}
@@ -234,7 +234,7 @@ const LnmHacks = () => {
 
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSf22WYYU0_e9R-GnHkv8XN4FBVdeXinJDSjj-li9Q-wjcAEHA/viewform" target="_blank">
 
-              <a href= "lnmhacks.xyz" target="_blank" >
+              <a href= "https://lnmhacks.xyz/" target="_blank" >
               <button
                 className={styles.event_register_button}
                 onMouseEnter={btnEnter} onMouseLeave={textLeave}

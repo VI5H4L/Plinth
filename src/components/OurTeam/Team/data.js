@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+import React from "react";
 export const teams = [
   {
     team: "Fest Heads",
@@ -77,8 +79,18 @@ export const teams = [
       {
         name: "Kingshuk Ghosh",
         image: "./images/teams/kingshuk.jpg",
-        designation: "Tech Lead",
+        designation: "Tech Sub-Lead",
         phone: "+91 93216 67834",
+        mail: "/",
+        facebook: "/",
+        instagram: "/",
+        linkedin: "/",
+      },
+      {
+        name: "Sourabh Joshi",
+        image: "./images/teams/sourabh.jpeg",
+        designation: "Tech Sub-Lead",
+        phone: "+91 95494 08165",
         mail: "/",
         facebook: "/",
         instagram: "/",
@@ -87,7 +99,7 @@ export const teams = [
     ],
     members: [
       {
-        subteam: "Designers",
+        subteam: "Designers & Developers",
         members: [
           {
             name: "Aditya Mittal",
@@ -102,8 +114,8 @@ export const teams = [
           {
             name: "Aryan Bansal",
             image: "./images/teams/aryan-bansal.jpg",
-            designation: "Designer",
-            phone: "+91 70237 11736",
+            designation: "UI/UX Designer",
+            phone: "+91 93510 36367",
             mail: "/",
             facebook: "/",
             instagram: "/",
@@ -112,32 +124,7 @@ export const teams = [
           {
             name: "Vishal Kumar",
             image: "./images/teams/vishal.jpg",
-            designation: "Designer",
-            phone: "+91 92057 34004",
-            mail: "/",
-            facebook: "/",
-            instagram: "/",
-            linkedin: "/",
-          },
-        ],
-      },
-      {
-        subteam: "Frontend Devs",
-        members: [
-          {
-            name: "Kingshuk Ghosh",
-            image: "./images/teams/kingshuk.jpg",
-            designation: "Frontend Mentor",
-            phone: "+91 93216 67834",
-            mail: "/",
-            facebook: "/",
-            instagram: "/",
-            linkedin: "/",
-          },
-          {
-            name: "Vishal Kumar",
-            image: "./images/teams/vishal.jpg",
-            designation: "Frontend Developer",
+            designation: <Fragment>Frontend Developer<br/>UI/UX Designer</Fragment>,
             phone: "+91 92057 34004",
             mail: "/",
             facebook: "/",
@@ -159,21 +146,6 @@ export const teams = [
             image: "./images/teams/ayush.jpg",
             designation: "Frontend Developer",
             phone: "+91 90136 66250",
-            mail: "/",
-            facebook: "/",
-            instagram: "/",
-            linkedin: "/",
-          },
-        ],
-      },
-      {
-        subteam: "Backend Devs",
-        members: [
-          {
-            name: "Sriraj Behera",
-            image: "./images/teams/sriraj.jpg",
-            designation: "Backend Mentor",
-            phone: "+91 70212 49264",
             mail: "/",
             facebook: "/",
             instagram: "/",
@@ -201,6 +173,7 @@ export const teams = [
           },
         ],
       },
+      
     ],
   },
 ];

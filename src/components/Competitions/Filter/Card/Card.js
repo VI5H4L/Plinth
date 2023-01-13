@@ -7,10 +7,11 @@ import { useNavigate } from "react-router-dom";
 
 function Card(props) {
   const navigate = useNavigate();
-  const handleRegister = (e, name) => {
-    navigate(`/${name}/registration`);
+  const handleRegister = (e, name,key) => {
+    const path=(props.auth == "false") ? "/login" : `/${name}`;
+    navigate(path)
   };
-  const handleClick = (e, name) => {
+  const handleClick = (e, name,key) => {
     navigate(`/${name}`);
   };
   return (
@@ -24,7 +25,7 @@ function Card(props) {
     >
       <div className={styles.imgContainer}>
         <LazyLoadImage 
-        src={ props.imgName ? "https://drive.google.com/uc?export=view&id=".concat(props.imgName.split('/d/').pop().split('/view')[0]) : "./Images/Coming-soon.jpg"} 
+        src={ props.imgName == "" ? "./images/coming-soon.jpg" : props.imgName  } 
         alt="" 
         effect = "blur"
         placeholderSrc="./Images/dark-bg-preloader.jpg"
@@ -42,10 +43,10 @@ function Card(props) {
           {/* <button className={styles.regbtn} onClick={(e) => handleRegister(e, props.name, props.index)}>
             Register
           </button> */}
-           <button className={styles.regbtn} onClick={() => alert("Registration Opening Soon!!")} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>
+           <button className={styles.regbtn} onClick={(e) => handleRegister(e, props.name.toLowerCase().replaceAll(" ", "_"),props.id)} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>
             Register
           </button>
-          <button className={styles.expbtn} onClick={(e) => handleClick(e, props.name.toLowerCase().replaceAll(" ", "_"))} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>
+          <button className={styles.expbtn} onClick={(e) => handleClick(e, props.name.toLowerCase().replaceAll(" ", "_"),props.id)} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>
             Explore
           </button>
         </div>

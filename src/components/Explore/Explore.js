@@ -14,13 +14,12 @@ import { motion } from "framer-motion/dist/framer-motion";
 import { Handles } from "../HomePage/PlinthHandlesSection/Handles";
 import Contact from "./Contacts/Contact";
 
-const Explore = () => {
+const Explore = ({ auth, setAuth }) => {
   const [section, setSection] = useState("about");
   const params = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const { name, id } = params;
-  console.log(name);
+  const { name } = params;
   const nameMod = name.replaceAll("_", " ");
   const data = events.filter((event) => event.name.toLowerCase() === nameMod);
   const [val, setVal] = useState(data[0].about);
@@ -31,7 +30,7 @@ const Explore = () => {
     const { id } = e.target;
     // console.log(e.target.id);
     if (id === "contact") {
-      setVal(<Contact contacts = {data[0].contacts}/>);
+      setVal(<Contact contacts={data[0].contacts} />);
       setSection("contact");
     } else if (id === "about") {
       setVal(data[0].about);
@@ -156,13 +155,13 @@ const Explore = () => {
         transition={{
           x: { delay: 0 },
           y: { delay: 0 },
-          type: 'tween', stiffness: 10000 ,bounce:0
+          type: 'tween', stiffness: 10000, bounce: 0
         }}
       />
       <div className={styles.explore_body}>
         <div className={styles.explore}>
 
-        <div onMouseEnter={textEnter} onMouseLeave={textLeave} className={`${styles.explore_heading} ${styles.none}`}>{data[0].name}</div>
+          <div onMouseEnter={textEnter} onMouseLeave={textLeave} className={`${styles.explore_heading} ${styles.none}`}>{data[0].name}</div>
 
           <motion.div variants={variants}
             initial="imgInitial"
@@ -173,15 +172,16 @@ const Explore = () => {
             }} className={styles.imgdiv}>
             <div className={styles.imgCon}>
               <LazyLoadImage
+
+                src={data[0].poster}
+                alt={`${data[0].name.toLowerCase()} poster`}
+                effect="blur"
+                height="100%"
+                width="100%"
+                placeholderSrc="./Images/dark-bg-preloader2.jpg"
                 className={styles.explore_image}
                 onMouseEnter={cardEnter} onMouseLeave={textLeave}
-                src={"https://drive.google.com/uc?export=view&id=".concat(data[0].poster.split('/d/').pop().split('/view')[0])}
-                alt={`${data[0].name.toLowerCase()} poster`}
-                effect = "blur"
-                height = "100%"
-                width = "100%"
-                placeholderSrc="./Images/dark-bg-preloader2.jpg"
-               />
+              />
             </div>
 
             <a href={data[0].rulebook} target="_blank">
@@ -212,6 +212,7 @@ const Explore = () => {
               duration: 1,
               delay: 0
             }} className={styles.explore_content}>
+
             <div onMouseEnter={textEnter} onMouseLeave={textLeave} className={`${styles.explore_heading} ${styles.notnone}`}>{data[0].name}</div>
             <div className={styles.explore_details}>
               <div onMouseEnter={btnEnter} onMouseLeave={textLeave} className={styles.explore_navbar}>
@@ -223,27 +224,29 @@ const Explore = () => {
                 >
                   About
                 </div>
-                <div
+                {data[0].structure == "" ? null : <div
                   className={section === "structure" ? `${styles.explore_navoptions} ${styles.active}` : `${styles.explore_navoptions}`}
                   onClick={(e) => handleView(e)}
                   id="structure"
                 >
                   Structure
-                </div>
-                <div
+                </div>}
+                {data[0].prizes == "" ? null : <div
                   className={section === "prizes" ? `${styles.explore_navoptions} ${styles.active}` : `${styles.explore_navoptions}`}
                   onClick={(e) => handleView(e)}
                   id="prizes"
                 >
                   Prizes
-                </div>
-                <div
+                </div>}
+
+                {data[0].timeline == "" ? null : <div
                   className={section === "timeline" ? `${styles.explore_navoptions} ${styles.active}` : `${styles.explore_navoptions}`}
                   onClick={(e) => handleView(e)}
                   id="timeline"
                 >
                   Timeline
-                </div>
+                </div>}
+
                 <div
                   className={section === "contact" ? `${styles.explore_navoptions} ${styles.active}` : `${styles.explore_navoptions}`}
                   onClick={(e) => handleView(e)}
@@ -262,12 +265,23 @@ const Explore = () => {
               Register
             </button> */}
 
+            {data[0].link === "" ? 
             <button
               className={styles.event_register_button}
-              onClick={() => alert("Registration Opening Soon!!")} onMouseEnter={btnEnter} onMouseLeave={textLeave}
+              onClick={() => navigate(`/payments/${name}`)} onMouseEnter={btnEnter} onMouseLeave={textLeave}
             >
-              Register
-            </button>
+              Payment
+            </button> :
+            <a href = {data[0].link} target = "_blank">
+              <button
+                className={styles.event_register_button}
+                onMouseEnter={btnEnter} onMouseLeave={textLeave}
+              >
+                Register
+              </button>
+            </a>  
+            }
+
 
             {/* <div className={styles.explore_details1}>
                 <div className={styles.explore_description1}>
@@ -289,7 +303,7 @@ const Explore = () => {
           <Handles />
         </motion.div>
 
-        {isDesktop&&<Particles
+        {isDesktop && <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}

@@ -7,7 +7,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Registration from "./Registration";
 
-function Reg() {
+function Reg({serverSystemUrl ,auth,setAuth }) {
 
   //Particle Bg
   const particlesInit = useCallback(async (engine) => {
@@ -19,13 +19,15 @@ function Reg() {
     // await console.log(container);
   }, []);
 
+  const isDesktop = window.screen.width > 600;
+
   return (
     <>
       <div className={styles.maindiv}>
-      <Registration />
+      <Registration serverSystemUrl={serverSystemUrl} auth={auth} setAuth={setAuth}/>
       </div>
 
-      <Particles
+      {isDesktop &&<Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
@@ -143,7 +145,7 @@ function Reg() {
             zIndex: 0,
           },
         }}
-      />
+      />}
     </>
   );
 }
