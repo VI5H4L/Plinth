@@ -11,6 +11,7 @@ import { gsap } from "gsap";
 import { Power3 } from "gsap";
 import { TimelineLite } from "gsap/gsap-core.js";
 import { CSSPlugin } from "gsap/CSSPlugin";
+import { Fragment } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
 function Registration({ serverSystemUrl, auth, setAuth }) {
@@ -49,6 +50,8 @@ function Registration({ serverSystemUrl, auth, setAuth }) {
     setCities(City.getCitiesOfCountry(obj.isoCode));
   };
   const onSubmit = async (data) => {
+    handleBtnClick();
+
     console.log("--->", {...data,accomodation});
 
     
@@ -60,7 +63,8 @@ function Registration({ serverSystemUrl, auth, setAuth }) {
     if (res.status === 200) {
        
        setMessage(res.data.msg)
-       setflashMessage(!flashMessage);
+       setflashMessage(true);
+       setTimeout(()=>{setflashMessage(false);},2800)
        console.log("registered as=====", res.data.user.role);
        setTimeout(() => {
         setAuth(res.data.user.role);
@@ -161,6 +165,11 @@ function Registration({ serverSystemUrl, auth, setAuth }) {
       window.removeEventListener("mousemove", mouseMove);
     };
   }, []);
+
+  const [BtnText, setBtnText] = useState("Register");
+  const handleBtnClick = () => {
+    setBtnText(<Fragment><p className={styles.typewriter}>Loading...</p></Fragment>);
+  };
  
   return (
     <div className={`${styles.background}`}>
@@ -281,43 +290,30 @@ function Registration({ serverSystemUrl, auth, setAuth }) {
             <p className={`${styles.p}`}>{errors.Phone.message}</p>
           )}
 
-          <select
+          <input
             onMouseEnter={subtextEnter}
             onMouseLeave={textLeave}
             className={`${styles.input}`}
+            placeholder="Country*"
             {...register("country", {
               required: "This field is required",
             })}
-            onChange={(e) => {
-              handleCountry(e.target.value);
-            }}
-          >
-            <option disabled selected value>
-              Country*
-            </option>
-            {country.map((value, index) => (
-              <option value={value.name} key={index}>
-                {value.name}
-              </option>
-            ))}
-          </select>
-          <select
+          />
+          {errors.country && (
+            <p className={`${styles.p}`}>{errors.country.message}</p>
+          )}
+          <input
             onMouseEnter={subtextEnter}
             onMouseLeave={textLeave}
             className={`${styles.input}`}
+            placeholder="City*"
             {...register("city", {
               required: "This field is required",
             })}
-          >
-            <option disabled selected value>
-              City*
-            </option>
-            {cities.map((value, index) => (
-              <option value={value.name} key={index}>
-                {value.name}
-              </option>
-            ))}
-          </select>
+          />
+          {errors.city && (
+            <p className={`${styles.p}`}>{errors.city.message}</p>
+          )}
           <input
             onMouseEnter={subtextEnter}
             onMouseLeave={textLeave}
@@ -400,13 +396,12 @@ function Registration({ serverSystemUrl, auth, setAuth }) {
               <label htmlFor="no" className={styles.radioLabel}>No</label>
             </div>
           </div>
-          <input
+          <button
             onMouseEnter={btnEnter}
             onMouseLeave={textLeave}
             type="submit"
-            value="Register"
             className={`${styles.btn}`}
-          />
+          >{BtnText}</button>
         </div>
       </form>
     </div>

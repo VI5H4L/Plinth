@@ -3,7 +3,7 @@ export const clubs = ["Astronomy", "Coding", "Debating", "Quizzinga", "Robotics"
 export const events = [
   {
     "id": "0",
-    "name": "",
+    "name": "accomodation",
     "club": "",
     "participation": "",
     "imgName": "",
@@ -46,7 +46,7 @@ export const events = [
     "structure": "An exciting hunt with a pinch of Astronomy!",
     "prizes": "Prize Pool of 20,000/-",
     "timeline": "09:00 AM to 13:00 PM on January 28th, 2023",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -80,7 +80,7 @@ export const events = [
     "structure": "Online Meme-Making competition themed on Astronomy.",
     "prizes": "Prizes Worth 10K!",
     "timeline": "13 January 2023 - Contest Starts 20 January 2023 - Submissions Close",
-    "payment": 199,
+    "payment": 0,
     "contacts":
       [
         {
@@ -100,7 +100,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/17PlRzH0VoFvmGduWgDuNh0u04yA9Lrjn/view?usp=share_link",
-    "link": "",
+    "link": "https://unstop.com/creative-cultural-event/astromemia-lnm-institute-of-information-technology-lnmiit-jaipur-585840",
     "clubemail": "astronomyclub@lnmiit.ac.in",
   },
   {
@@ -114,7 +114,7 @@ export const events = [
     "structure": "Presentation making competition conducted in two rounds. Shortlisted candidates from the online round will be asked to present in offline mode in LNMIIT.",
     "prizes": "Prizes Worth 15K!",
     "timeline": "17:00 PM, 13 January 2023 - Problem statement will be released 23:59 PM, 15 January 2023 - Submission Deadline, 16:00 PM, 27 January 2023 - Shortlisted teams will get a chance to present their case studies to judges in offline mode",
-    "payment": 199,
+    "payment": 0,
     "contacts":
       [
         {
@@ -143,12 +143,12 @@ export const events = [
     "club": "Astronomy",
     "participation": "Solo Participation",
     "imgName": "./images/events/astronomy/dhoomketu/image.jpg",
-    "poster": "/images/events/astronomy/dhoomketu/poster.jpg",
+    "poster": "/images/events/astronomy/dhoomketu/poster.png",
     "about": "Want to relax a little bit and take a break from the everyday hustle? The Astronomy club brings for you the Sky gazing session with many short and exciting events such as telescope handling, jamming sessions, poetry sessions, discussions on mythology, astrophysics and a lot more.",
     "structure": "A relaxing and entertaining event having telescopic handling, jamming sessions, poetry sessions, etcetera.",
-    "prizes": "Exciting Prize Pool of 10K!",
+    "prizes": "",
     "timeline": "20:00 PM Onwards on 27th January 2023 and 28th January 2023",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -167,7 +167,7 @@ export const events = [
           "email": "21UCC129@lnmiit.ac.in",
         },
       ],
-    "rulebook": "https://drive.google.com/file/d/17WKj7_woMQJF4zot30EwvW3Qmw3zfPE4/view?usp=share_link",
+    "rulebook": "https://drive.google.com/file/d/17WKj7_woMQJF4zot30EwvW3Qmw3zfPE4/view",
     "link": "",
     "clubemail": "astronomyclub@lnmiit.ac.in",
   },
@@ -182,7 +182,7 @@ export const events = [
     "structure": "Online Astrophotography Event.",
     "prizes": "Prizes Worth 15K!",
     "timeline": "13th January 2023 to 23rd January 2023",
-    "payment": 199,
+    "payment": 0,
     "contacts":
       [
         {
@@ -216,7 +216,7 @@ export const events = [
     "structure": "",
     "prizes": "Top rankers will get Exciting goodies",
     "timeline": "27-28 January 2023",
-    "payment": 199,
+    "payment": 0,
     "contacts":
       [
         {
@@ -231,7 +231,7 @@ export const events = [
         },
       ],
     "rulebook": "https://docs.google.com/document/d/1Z_0ZrqXATSKFc239i15f7O4zVW-Iy1uS/edit?usp=sharing&ouid=103682676179344015200&rtpof=true&sd=true",
-    "link": "",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLScyBNYmg_JE_cXgOFUNWobtDqshR1wAlIXZuq73Uz2HUyi6jQ/viewform",
     "clubemail": "cybrosclub@lnmiit.ac.in",
   },
   {
@@ -245,7 +245,7 @@ export const events = [
     "structure": "1V1 with fast thinking",
     "prizes": "Top rankers will get Exciting goodies",
     "timeline": "27-28 January 2023",
-    "payment": 199,
+    "payment": 0,
     "contacts":
       [
         {
@@ -260,7 +260,7 @@ export const events = [
         },
       ],
     "rulebook": "https://docs.google.com/document/d/1Z_0ZrqXATSKFc239i15f7O4zVW-Iy1uS/edit?usp=sharing&ouid=103682676179344015200&rtpof=true&sd=true",
-    "link": "",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSdLHc7PArUSnDiZbSU7RKa5PtuL376AZV2p3VYkcbWZQihaZQ/viewform",
     "clubemail": "cybrosclub@lnmiit.ac.in",
   },
   {
@@ -274,7 +274,7 @@ export const events = [
     "structure": "Onsite competitive programming contest",
     "prizes": "Prizes Worth 30K",
     "timeline": "19 December 2022 - Online round concluded 29 January 2023 - Onsite Round",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -289,7 +289,7 @@ export const events = [
         },
       ],
     "rulebook": "https://docs.google.com/document/d/1Z_0ZrqXATSKFc239i15f7O4zVW-Iy1uS/edit?usp=sharing&ouid=103682676179344015200&rtpof=true&sd=true",
-    "link": "",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSeETAUcVCXd0iytIqI4xQkN-c3Rbkw0ayDXrTSYZed2YCVmkQ/viewform",
     "clubemail": "cybrosclub@lnmiit.ac.in",
   },
   {
@@ -302,7 +302,7 @@ export const events = [
     "structure": "ICPC Structure with Team Size of Max 3 Members",
     "prizes": "Prizes Worth 50K",
     "timeline": "28th January 2023",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -317,42 +317,8 @@ export const events = [
         },
       ],
     "rulebook": "https://docs.google.com/document/d/1Z_0ZrqXATSKFc239i15f7O4zVW-Iy1uS/edit?usp=sharing&ouid=103682676179344015200&rtpof=true&sd=true",
-    "link": "",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSe4cE-hQrO0pQRaGb5LxHkLjm5_XXlInrN36BFmu1Bnd5Ggug/viewform",
     "clubemail": "cybrosclub@lnmiit.ac.in",
-  },
-  {
-    "id": "11",
-    "name": "Change My Mind",
-    "club": "Debating",
-    "participation": "Solo/Team Participation",
-    "imgName": "./images/events/debsoc/changemymind/image.jpg",
-    "poster": "/images/events/debsoc/changemymind/poster.jpg",
-    "about": "\"Change My Mind\" event is a public discussion forum where individuals will be presented with a random opinion to which you’ll have to convince the chair with argumentation to adhere to your own thoughts on the topic.",
-    "structure": "On site passively-aggressive refutal",
-    "prizes": "The winners will be awarded prizes, goodies and vouchers worth Rs. 6000/-.",
-    "timeline": "27th, 28th and 29th January 2023",
-    "payment": 199,
-    "contacts":
-      [
-        {
-          "name": "Arjun Saxena",
-          "number": "+91 95714 85158",
-          "email": "20ucc021@lnmiit.ac.in",
-        },
-        {
-          "name": "Divyanshi Gautam",
-          "number": "+91 94624 21299",
-          "email": "20ucs066@lnmiit.ac.in",
-        },
-        {
-          "name": "Saumya Kalra",
-          "number": "+91 6375 548121",
-          "email": "20uec119@lnmiit.ac.in",
-        },
-      ],
-    "rulebook": "https://drive.google.com/file/d/1nZtXPLpR5vT78HMNWDVkrw1_HyV-N33E/view?usp=share_link",
-    "link": "",
-    "clubemail": "debsoc@lnmiit.ac.in",
   },
   {
     "id": "12",
@@ -384,7 +350,41 @@ export const events = [
           "email": "20uec119@lnmiit.ac.in",
         },
       ],
-    "rulebook": "https://drive.google.com/file/d/1lAu1T0sBEtbuDqSYWd-WFSkoa447bBWc/view?usp=share_link",
+    "rulebook": "https://drive.google.com/file/d/1SbMYQCSguU2ROVODph3KJKTkyllw9lTm/view",
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSdlckbELXlJ0XCuFyEiSSaXldr7VaDOqUfzTt7hSI4slc10AQ/viewform",
+    "clubemail": "debsoc@lnmiit.ac.in",
+  },
+  {
+    "id": "11",
+    "name": "Change My Mind",
+    "club": "Debating",
+    "participation": "Solo/Team Participation",
+    "imgName": "./images/events/debsoc/changemymind/image.jpg",
+    "poster": "/images/events/debsoc/changemymind/poster.jpg",
+    "about": "\"Change My Mind\" event is a public discussion forum where individuals will be presented with a random opinion to which you’ll have to convince the chair with argumentation to adhere to your own thoughts on the topic.",
+    "structure": "On site passively-aggressive refutal",
+    "prizes": "The winners will be awarded prizes, goodies and vouchers worth Rs. 6000/-.",
+    "timeline": "27th, 28th and 29th January 2023",
+    "payment": 99,
+    "contacts":
+      [
+        {
+          "name": "Arjun Saxena",
+          "number": "+91 95714 85158",
+          "email": "20ucc021@lnmiit.ac.in",
+        },
+        {
+          "name": "Divyanshi Gautam",
+          "number": "+91 94624 21299",
+          "email": "20ucs066@lnmiit.ac.in",
+        },
+        {
+          "name": "Saumya Kalra",
+          "number": "+91 6375 548121",
+          "email": "20uec119@lnmiit.ac.in",
+        },
+      ],
+    "rulebook": "https://drive.google.com/file/d/1nZtXPLpR5vT78HMNWDVkrw1_HyV-N33E/view?usp=share_link",
     "link": "",
     "clubemail": "debsoc@lnmiit.ac.in",
   },
@@ -399,7 +399,7 @@ export const events = [
     "structure": "On site idea centric graffiti",
     "prizes": "",
     "timeline": "27th, 28th and 29th January 2023",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -428,10 +428,10 @@ export const events = [
     "club": "Startups",
     "participation": "Team Participation",
     "imgName": "./images/events/e-cell/sharktank/image.jpg",
-    "poster": "/images/events/e-cell/sharktank/poster.jpg",
+    "poster": "/images/events/e-cell/sharktank/poster.png",
     "about": "A four-round competition that leads to the final stage of negotiations with the 'investor' in exchange for 'equity'. Scale-up your startup by earning mentorship and guidance by renowned Entrepreneurs from across the nation and established Angel Investors in this ecosystem.",
     "structure": "Round 1 (Online): Your startup's Pitch Deck needs to be Submitted on Unstop Platform ; Round 2 (Online): A video pitch describing your startup in the most creative form needs to be Submitted on Unstop Platform ; Round 3 (Offline): Offline Pitching in front of Judges (established Entrepreneurs); Round 4 (Offline): Final pitch in front of Angel Investors and Micro Venture Capitalists.",
-    "prizes": "Cash Prizes worth a minimum of Rs. 50,000/- will be given to the winners including Prototype Funding of Rs.35,000+",
+    "prizes": "Cash Prizes worth a minimum of Rs. 1,00,000/- will be given to the winners including Prototype Funding of Rs.35,000+",
     "timeline": "Round 1 (Online): 14 December 2022 - 12 January 2023; Round 2 (Online): 13 Januray - 20 January 2023; Round 3 (Offline): 27th January 2023; Round 4 (Offline): 28th January 2023",
     "payment": 700,
     "contacts":
@@ -448,7 +448,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1a2gUgb00k4zdFcPKsalunUtqlmIBGa3j/view?usp=share_link",
-    "link": "",
+    "link": "https://unstop.com/competition/shark-tank-lnmiit-lnm-institute-of-information-technology-lnmiit-jaipur-522102",
     "clubemail": "ecell@lnmiit.ac.in",
   },
   {
@@ -462,7 +462,7 @@ export const events = [
     "structure": "The event would be happening on designated Stock Simulation Platform and the prize distribution ceremony would take place during Plinth ",
     "prizes": "Cash Prizes worth a minimum of Rs. 10,000/- will be given to the winners.",
     "timeline": "21 January 2023 - Registrations Closes, 23 January 2023 to 27 January 2023 - Contest dates",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -491,7 +491,7 @@ export const events = [
     "about": "A Competition in which robot battles using various methods to incapacitate the opponents robots.",
     "structure": "Points will be given by judges based on aggression, damage, and control. A team may win by knockout if it successfully immobilizes its opponent for 10 seconds. In case of a double KO, the winner will be decided by points.",
     "prizes": "1st Prize - ₹40000, 2nd Prize - ₹20000, Prizes worth ₹200000 ",
-    "timeline": "27 JAN (2PM-5PM) & 29 JAN (3PM-6PM)",
+    "timeline": "28 JAN & 29 JAN, 2023",
     "payment": 1000,
     "contacts":
       [
@@ -511,8 +511,8 @@ export const events = [
           "email": "21uec157@lnmiit.ac.in",
         },
       ],
-    "rulebook": "https://drive.google.com/file/d/1my1PwBubvkmib2Q3mzOiosMj8UD1DCxX/view?usp=share_link",
-    "link": "",
+    "rulebook": "https://drive.google.com/file/d/1Gs4kwoEJO2toOT3BBFMS3t5s8tbzkkk0/view",
+    "link": "https://forms.gle/EXPGAb3iy7TSem3f6",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -526,7 +526,7 @@ export const events = [
     "structure": "Team Size: 4-5 members. The team having less score than the top three teams will be eliminated and in the case of a tie in points, time taken will become the judging criteria for the affected teams",
     "prizes": "1st Prize - ₹15000, 2nd Prize - ₹10000, Prizes worth ₹40000  ",
     "timeline": "28 JAN (12PM-6PM) & 29 JAN (11AM-5PM)",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -546,7 +546,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1RLk1217JeAmx9tYWjsYF2c5pLNvzuXnR/view?usp=share_link",
-    "link": "",
+    "link": "https://forms.gle/YV1tqYcZaUrJHKVJA",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -557,10 +557,10 @@ export const events = [
     "imgName": "./images/events/phoenix/robocup/image.png",
     "poster": "/images/events/phoenix/robocup/poster.jpg",
     "about": "Teams have to build two bots to score goals against each other while avoiding penalties. It will be a 2v2 match and the team scoring more goals wins.",
-    "structure": "Team Size: 2 members. The team scoring more goals will be declared the winner. In the case of a tie, the winner is decided by the penalties that teams will be getting when: Kicking the ball out of the arena or damaging the opponent's bot, intentionally making physical contact with the opponent's bots, pulling the bot (in case of a wired connection).",
+    "structure": "Team Size: 2-4 members. The team scoring more goals will be declared the winner. In the case of a tie, the winner is decided by the penalties that teams will be getting when: Kicking the ball out of the arena or damaging the opponent's bot, intentionally making physical contact with the opponent's bots, pulling the bot (in case of a wired connection).",
     "prizes": "Prizes worth ₹25000",
     "timeline": "27 JAN (12PM-6PM) & 28 JAN (3PM-6PM)",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -580,7 +580,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/19nMcHPNy9mmHaB_6h5c8ONUuBm3P64JY/view?usp=share_link",
-    "link": "",
+    "link": "https://forms.gle/zLw7LHRV62hgRi1C7",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -594,7 +594,7 @@ export const events = [
     "structure": "Team Size: 2-6 members. If the dimensions of the bot are not as per the rulebook, the respective team will be eliminated",
     "prizes": "Prizes worth ₹35000",
     "timeline": "27 JAN (11AM-5PM) & 28 JAN (11AM-5PM)",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -614,7 +614,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1f9czn_aGfLwwuw1BRYuLkgIiolPcb4A5/view?usp=share_link",
-    "link": "",
+    "link": "https://forms.gle/vEAZzMA6qJVKaEdh9",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -628,6 +628,7 @@ export const events = [
     "structure": "Team Size: 2-6 members. If a car is disintegrated during the race or there is another car that has completed the laps in much lesser time or a car starts off twice before waving the flag or countdown, the team is eliminated.",
     "prizes": "1st Prize - ₹14000, 2nd Prize - ₹6000, Prizes worth ₹40000 ",
     "timeline": "28 JAN (12PM-4PM)",
+    "payment": 99,
     "contacts":
       [
         {
@@ -642,7 +643,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1m5wO5JcpHDDnvTxiSJujsj4Oaw1TdSRP/view?usp=share_link",
-    "link": "",
+    "link": "https://forms.gle/buZAnQZ6zDFGUui1A",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -657,7 +658,7 @@ export const events = [
     "structure": "Team Size: 1-4 members. There will be no elimination rounds. The team with the minimum time run will be considered as the winner.",
     "prizes": "Prizes worth ₹40000  ",
     "timeline": "28 JAN (5PM-8PM) & 29 JAN (5PM-8PM)",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -671,8 +672,8 @@ export const events = [
           "email": "20uec074@lnmiit.ac.in",
         },
       ],
-    "rulebook": "",
-    "link": "",
+    "rulebook": "https://drive.google.com/file/d/1qElpcELcWc3yulSM9mKzVk1SqDsTvuIo/view?usp=drivesdk",
+    "link": "https://forms.gle/hCamdpQVUMvgvsWs9",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -687,7 +688,7 @@ export const events = [
     "structure": "",
     "prizes": "Prizes worth ₹20000  ",
     "timeline": "29 JAN (10AM-4PM)",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -701,8 +702,8 @@ export const events = [
           "email": "20ucs105@lnmiit.ac.in",
         },
       ],
-    "rulebook": "",
-    "link": "",
+    "rulebook": "https://drive.google.com/file/d/1eC2LhPSJei2WhpYDNCmleCQz0-jlCGCq/view",
+    "link": "https://forms.gle/MzLsvoSmBcvHRHwcA",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -716,7 +717,7 @@ export const events = [
     "structure": "Team Size: 1-4 members. If the dimensions of the bot are not as per the rulebook, if the bot gets disintegrated during the event, or if the team has scored fewer points than other teams, then the respective team will be eliminated.",
     "prizes": "Prizes worth ₹20000",
     "timeline": "27 JAN (12PM-3PM) & 28 JAN (12PM-3PM)",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -736,7 +737,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1oL5iR0SIrQ55DwzWIcDiTpH2E6YWL5hZ/view?usp=share_link",
-    "link": "",
+    "link": "https://forms.gle/wcxeUFAA9NeX6h9E9",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -751,7 +752,7 @@ export const events = [
     "structure": "",
     "prizes": "1st Prize - ₹10000, 2nd Prize - ₹5000",
     "timeline": "29 JAN (11AM-4PM) ",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -766,7 +767,7 @@ export const events = [
         },
       ],
     "rulebook": "",
-    "link": "",
+    "link": "https://forms.gle/4qkCrjyGLKAWBwwR8",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -780,7 +781,7 @@ export const events = [
     "structure": "Once your balloon is shot, you will be considered eliminated.",
     "prizes": " Gift hampers ",
     "timeline": "28 JAN & 29 JAN",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -814,7 +815,7 @@ export const events = [
     "structure": "Team Size: 1-4 members. Only one member is allowed to handle the bot, other than that personal devices are not permitted close to the arena, and all other Wi-Fi, Bluetooth, and other devices need to be turned off only a bot should be inside the arena, nothing else.",
     "prizes": "Prizes worth ₹30000 ",
     "timeline": "28 JAN (11AM-6PM)",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -834,7 +835,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1myh6pyjT54wRcrUc1tNizTtpnRXcbIOE/view?usp=share_link",
-    "link": "",
+    "link": "https://forms.gle/X2FRgQtvnX1mi2cW6",
     "clubemail": "phoenixclub@lnmiit.ac.in",
   },
   {
@@ -847,8 +848,8 @@ export const events = [
     "about": "Brandwagon is Quizzinga's flagship business quiz which takes place every year during Plinth. It will be held in two rounds. First is the written round and six highest scoring teams will move on to the finals.You have to participate in teams of 3.",
     "structure": "Team Size: 3 members. Prelims: Pen-paper based round. The quizmaster will present the questions and you will have to write your answers. Final round: Top 6 teams will compete in a quiz consisting of different biz genres to become the champion. ",
     "prizes": "Prizes worth Rs. 15,000",
-    "timeline": "Date: 28.01.2023 Time: 02:00 PM-05:00 PM",
-    "payment": 199,
+    "timeline": "Date: 28.01.2023 Time: Starts at 10 AM",
+    "payment": 99,
     "contacts":
       [
         {
@@ -863,7 +864,7 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1WGAFtOho72M649xFUlAwNa-clklOdQRw/view?src/components/Competitions/Competitions.jsusp=share_link",
-    "link": "",
+    "link": "https://forms.gle/EA3rhaQ6Dcg6XHV48",
     "clubemail": "quizzinga@lnmiit.ac.in",
   },
   {
@@ -877,7 +878,7 @@ export const events = [
     "structure": "Questions will be displayed in a sequential manner. The answer to a queston is the key to unlock the next question. We will post hints on our Instagram stories (@quizzingalnm). The first few participants to unlock all the levels will be declared the winners.",
     "prizes": "Prizes worth Rs. 10,000",
     "timeline": "Date : 20.01.2023 to 22.01.2023",
-    "payment": 199,
+    "payment": 0,
     "contacts":
       [
         {
@@ -891,7 +892,7 @@ export const events = [
           "email": "20ume027@lnmiit.ac.in",
         },
       ],
-    "rulebook": "https://drive.google.com/file/d/1uhmyAjyat0YgUuWzery8J89maywnSTc0/view?usp=share_link",
+    "rulebook": "https://drive.google.com/file/d/1PjImrYlW7aTxIj_tAVNXrUkTf8PLckUO/view",
     "link": "https://unstop.com/quiz/cryptex-lnm-institute-of-information-technology-lnmiit-jaipur-582136",
     "clubemail": "quizzinga@lnmiit.ac.in",
   },
@@ -906,7 +907,7 @@ export const events = [
     "structure": "Team Size: 3 members. Prelims: Pen-paper based round. The quizmaster will present the questions and you will have to write your answers.  Final Round: Top 16 teams will qualify for this round. We will merge two teams into one and then they will be alloted different IPL franchises. The 8 franchises will compete against each other to maximise their rating given a pixed 100 Cr. purse. ",
     "prizes": "Prizes worth Rs. 20,000",
     "timeline": "Date: 29.01.2023  Time: 10:00 AM-12:00 PM Prelims  01:00 PM-06:00 PM Auction",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -921,54 +922,20 @@ export const events = [
         },
       ],
     "rulebook": "https://drive.google.com/file/d/1TTiCsoS8TB14Y4Ek-vHeyOT_Nekv00nC/view?usp=share_link",
-    "link": "",
+    "link": "https://forms.gle/8JErBs3W2rh9ErDr8",
     "clubemail": "quizzinga@lnmiit.ac.in",
-  },
-  {
-    "id": "31",
-    "name": "BloodConnect",
-    "club": "Fun Events",
-    "participation": "Solo Participation",
-    "imgName": "",
-    "poster": "",
-    "about": "BloodConnect is India’s largest youth-led organization that works with colleges, corporates, and RWAs to help the blood banks be blood sufficient. In collaboration with PLINTH'23 we are providing camps to contribute for the good cause. We at BloodConnect live by the motto of saving lives by ensuring every drop of blood contributes towards the right cause of saving lives.",
-    "structure": "",
-    "prizes": "",
-    "timeline": "",
-    "payment": 199,
-    "contacts":
-      [
-        {
-          "name": "Shivam Yadav",
-          "number": "+91 63888 09962",
-          "email": "20uec121@lnmiit.ac.in",
-        },
-        {
-          "name": "Arin Khandelwal",
-          "number": "+91 70963 56002",
-          "email": "21ucs027@lnmiit.ac.in",
-        },
-        {
-          "name": "Bhavika Agarwal",
-          "number": "+91 98293 00345",
-          "email": "20dec003@lnmiit.ac.in",
-        },
-      ],
-    "rulebook": "",
-    "link": "",
-    "clubemail": "",
   },
   {
     "id": "32",
     "name": "WCA SPEEDCUBING",
     "club": "Fun Events",
     "participation": "Solo Participation",
-    "imgName": "",
-    "poster": "",
+    "imgName": "./images/events/poc/wca/poster.jpg",
+    "poster": "./images/events/poc/wca/poster.jpg",
     "about": "Speedcubing is a competitive sport involving sovling a variety of combination puzzles using cube. The World Cube Associatin (WCA) governs competitions for mechanical puzzles called 'twisty puzzles'. PLINTH'23 is a stage to participate and show case your skills.",
-    "structure": "",
-    "prizes": "",
-    "timeline": "",
+    "structure": "Please Check Rulebook of the WCA for the structure of Speedcubing.",
+    "prizes": "Prizes worth Rs. 55,000",
+    "timeline": "28th Jan, 2023 to 29th Jan, 2023",
     "payment": 400,
     "contacts":
       [
@@ -979,12 +946,12 @@ export const events = [
         },
         {
           "name": "Akash Mondal",
-          "number": "",
+          "number": "+91 74985 50574",
           "email": "20ucs013@lnmiit.ac.in",
         },
       ],
-    "rulebook": "",
-    "link": "",
+    "rulebook": "https://www.worldcubeassociation.org/regulations/",
+    "link": "https://www.worldcubeassociation.org/competitions/LNMIITJaipurCubeOpen2023#competition-events",
     "clubemail": "",
   },
   {
@@ -998,7 +965,7 @@ export const events = [
     "structure": "2-4 players will play at one time",
     "prizes": "",
     "timeline": "11AM to 5PM on January 27th, 2023",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1032,7 +999,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1066,7 +1033,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1095,7 +1062,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1124,7 +1091,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1153,7 +1120,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1182,7 +1149,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1211,7 +1178,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1240,7 +1207,7 @@ export const events = [
     "structure": "",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1263,13 +1230,13 @@ export const events = [
     "name": "Bridge the Barrier",
     "club": "ASME",
     "participation": "Team Participation",
-    "imgName": "./images/events/asme/bridgethebarrier/poster.jpg",
-    "poster": "/images/events/asme/bridgethebarrier/poster.jpg",
+    "imgName": "./images/events/asme/bridgethebarrier/poster.png",
+    "poster": "/images/events/asme/bridgethebarrier/poster.png",
     "about": "You have to team up together and find a innovative way of joining two masses of land together so that people and traffic and move around. Design a bridge that can sustain a specific amount of load and win exciting prizes",
     "structure": "Team Size: 3-5 people",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1292,13 +1259,13 @@ export const events = [
     "name": "Model Rocket Masters",
     "club": "ASME",
     "participation": "Team Participation",
-    "imgName": "./images/events/asme/modelrocketmasters/poster.jpg",
-    "poster": "/images/events/asme/modelrocketmasters/poster.jpg",
+    "imgName": "./images/events/asme/modelrocketmasters/poster.png",
+    "poster": "/images/events/asme/modelrocketmasters/poster.png",
     "about": "Design and build a model rocket within the specified dimensions robust enough to withstand the pressure with the solid rocket motor provided by the organizers and when launched from the launch pad achieves the maximum altitude above ground level.",
     "structure": "Team Size: 3-5 people",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {
@@ -1321,13 +1288,13 @@ export const events = [
     "name": "Spaghetti Tower",
     "club": "ASME",
     "participation": "Team Participation",
-    "imgName": "./images/events/asme/sphaghettitower/poster.jpg",
-    "poster": "/images/events/asme/sphaghettitower/poster.jpg",
+    "imgName": "./images/events/asme/sphaghettitower/poster.png",
+    "poster": "/images/events/asme/sphaghettitower/poster.png",
     "about": "It’s a fun event that will last upto 20 to 25 mins. The basic idea is that a team is given a handful of supplies to work with spaghetti, marshmallow, tape and string.",
     "structure": "Team SIze: 1-3 people",
     "prizes": "",
     "timeline": "",
-    "payment": 199,
+    "payment": 99,
     "contacts":
       [
         {

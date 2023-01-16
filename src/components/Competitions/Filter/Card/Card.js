@@ -7,9 +7,10 @@ import { useNavigate } from "react-router-dom";
 
 function Card(props) {
   const navigate = useNavigate();
-  const handleRegister = (e, name,key) => {
-    const path=(props.auth == "false") ? "/login" : `/${name}`;
-    navigate(path)
+  const handleRegister = (e) => {
+    if(props.link == ""){
+      alert("Team Registrations Opening Soon!!");
+    }
   };
   const handleClick = (e, name,key) => {
     navigate(`/${name}`);
@@ -37,15 +38,16 @@ function Card(props) {
         <div className={styles.name} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>{props.name}</div>
         <div className={styles.tag}>
           <div className={styles.teamTag}>{props.participation}</div>
-          <div className={`${styles.teamTag} ${styles.clubName}`}>{props.club}</div>
+          <div className={`${styles.teamTag} ${styles.clubName}`}>
+          {props.payment > 0 ? "Paid" : "Free"}</div>
         </div>
         <div className={styles.btn}>
-          {/* <button className={styles.regbtn} onClick={(e) => handleRegister(e, props.name, props.index)}>
-            Register
-          </button> */}
-           <button className={styles.regbtn} onClick={(e) => handleRegister(e, props.name.toLowerCase().replaceAll(" ", "_"),props.id)} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>
-            Register
+        
+           <button className={styles.regbtn} onClick={(e) => handleRegister(e)} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>
+            {props.link == "" ? "Team Register" : 
+           <a href={props.link} target="_blank">Team Register </a>}
           </button>
+          
           <button className={styles.expbtn} onClick={(e) => handleClick(e, props.name.toLowerCase().replaceAll(" ", "_"),props.id)} onMouseEnter={()=>{props.btnEnter();}} onMouseLeave={()=>{props.textLeave();}}>
             Explore
           </button>

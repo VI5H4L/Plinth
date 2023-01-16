@@ -14,6 +14,7 @@ import FlashMessage from "../FlashMessage/FlashMessage";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { Fragment } from "react";
 
 export default function Login({ serverSystemUrl ,auth,setAuth}) {
 
@@ -37,7 +38,7 @@ export default function Login({ serverSystemUrl ,auth,setAuth}) {
   });
 
   const onSubmit = async(data) => {
-    
+    handleBtnClick();
     const res = await axios.post(
       `${serverSystemUrl}/auth/login`,
       data,
@@ -47,7 +48,8 @@ export default function Login({ serverSystemUrl ,auth,setAuth}) {
     if (res.status === 200) {
       console.log("logged as -",res.data.user.role);
       setMessage(res.data.msg)
-      setflashMessage(!flashMessage);
+      setflashMessage(true);
+      setTimeout(()=>{setflashMessage(false);},2800)
       setTimeout(() => {
        setAuth(res.data.user.role);
        navigate("/competitions")  
@@ -173,6 +175,12 @@ export default function Login({ serverSystemUrl ,auth,setAuth}) {
   }, []);
 
   const isDesktop = window.screen.width > 600;
+
+  const [BtnText, setBtnText] = useState("Login");
+  const handleBtnClick = () => {
+    setBtnText(<Fragment><p className={styles.typewriter}>Loading...</p></Fragment>);
+  };
+
   return (
     <div className={`${styles.background}`}>
       <motion.div
@@ -253,16 +261,16 @@ export default function Login({ serverSystemUrl ,auth,setAuth}) {
             <p className={`${styles.p}`}>{errors.password.message}</p>
           )}
 
-          <input
+          <button
             onMouseEnter={btnEnter}
             onMouseLeave={textLeave}
             type="submit"
-            value="LOGIN"
             className={`${styles.btn}`}
-          />
+          >{BtnText}</button>
+          
           <div className={styles.lower}>
             <a href="/registration" className={styles.a}>Don't have an account?</a>
-            <a href="" className={styles.a}>Forgot Password?</a>
+            <a href="" styles={{color:"white"}} className={styles.a}>Forgot Password?</a>
           </div>
         </div>
       </form>
