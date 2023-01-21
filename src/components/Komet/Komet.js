@@ -7,9 +7,11 @@ import { motion } from "framer-motion/dist/framer-motion";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { useNavigate } from "react-router-dom";
 
 function Komet() {
   //Particle Bg
+  const navigate=useNavigate();
   const particlesInit = useCallback(async (engine) => {
     // console.log(engine);
     await loadFull(engine);
@@ -145,26 +147,24 @@ function Komet() {
                 onMouseLeave={textLeave}
                 className={`${styles.text}`}
               >
-                Lorem ipsum dolor sit amet consectetur. Quam cras molestie
-                consequat quis enim netus pharetra. Enim libero sed urna in.
-                Faucibus justo tellus eget arcu. Turpis sed fermentum et risus
-                cursus enim mauris suspendisse.
-                <br />
-                Lorem at feugiat massa vitae sagittis at lectus ipsum.
-                Suspendisse turpis laoreet natoque consectetur eget quisque
-                quisque. Eget semper tempor sed tincidunt dolor purus arcu
-                senectus et. Semper
+                Welcome to the NFT Entry Pass for the PLINTH’23, through which you will be allowed entry at the venue, i.e., LNMIIT, Jaipur, brought to by our <strong>NFT Tech Partner</strong>. Along with this pass, there are multiple utilities attached to this pass itself, including <strong>Pronite, Workshops, SharkTank, LNMHacks </strong> and so and!!!
+                <br /><br />
+                The team is excited to bring together a community of Web-3 enthusiasts and offer them a platform to showcase their skills, learn from experts and share their knowledge. Don't miss out on this opportunity to be a part of the future of the internet.
+                <br /><br />
+                <strong>Note: An entry pass is mandatory to participate in all events.</strong> 
               </div>
             </div>
+        <a href="https://www.wallet.komet.me/nfts/Plinth_2023_Entry_+_Pro_Night_Pass/303" target="_blank">
 
             <button
               className={styles.event_register_button}
               onMouseEnter={btnEnter}
               onMouseLeave={textLeave}
-              onClick={() => alert("Claim Ticket")}
-            >
+              onClick={() =>navigate(-3)}
+              >
               Claim your Tickets!
             </button>
+              </a>
           </div>
         </div>
 

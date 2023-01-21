@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import styles from "./Payment.module.css";
-import qr from './qr.jpeg'
+import qr from './qr.jpeg';
+import debsocqr from './debsocqr.jpg';
 import { events } from '../Competitions/data'
 import { motion } from "framer-motion/dist/framer-motion";
 import { useForm } from "react-hook-form";
@@ -13,7 +14,9 @@ function Payment(props) {
   const user_id = props.userid
   const navigate = useNavigate()
   const { eventname } = useParams();
+  // const eventname = "astrohunt"
   console.log(eventname);
+
   const reqEvent = events.filter((event) => event.name.toLowerCase() === eventname.replaceAll("_", " "))
   const [flashMessage, setflashMessage] = useState(false);
   const [message, setMessage] = useState("")
@@ -59,13 +62,7 @@ function Payment(props) {
       });
       return;
     }
-    if (file.type != "image/png" && file.type != "image/jpg") {
-      setError("file", {
-        type: "file",
-        message: "Only image is valid"
-      });
-      return;
-    }
+    
     const formData = new FormData();
     formData.append("file", data.file[0])
     formData.append("paid", paid);
@@ -86,7 +83,7 @@ function Payment(props) {
       //  console.log("registered as=====", res.data.user.role);
       setTimeout(() => {
         // setAuth(res.data.user.role);
-        navigate("/competitions")
+        navigate(-1)
       }, 3000);
     }; 
   }
@@ -228,9 +225,9 @@ function Payment(props) {
           )}
           <div className={styles.qrDiv}>
             <div className={styles.input}>QR code for payment </div>
-            <img src={qr} className={styles.qrImg} />
+            <img src={eventname === "plinth's_mun'23" ? debsocqr : qr} className={styles.qrImg} />
           </div>
-          <div className={`${styles.pay}`}>Upi ID to pay to : 7015824452@paytm</div>
+          <div className={`${styles.pay}`}>{eventname === "plinth's_mun'23" ? "UpiID to pay to: divyanshigautam.2001@oksbi" : "Upi ID to pay to : 7015824452@paytm"}</div>
           <input
             className={`${styles.input}`} type="file" {...register("file", {
               required: "Please upload payment screenshot",
@@ -274,13 +271,6 @@ function Payment(props) {
               id="sharktank"
             >
               Shark Tank
-            </div>
-            <div
-              className={section === "mun" ? `${styles.explore_navoptions} ${styles.active}` : `${styles.explore_navoptions}`}
-              onClick={(e) => handleView(e)}
-              id="mun"
-            >
-              MUN
             </div>
             <div
               className={section === "jaipurCubeOpen" ? `${styles.explore_navoptions} ${styles.active}` : `${styles.explore_navoptions}`}

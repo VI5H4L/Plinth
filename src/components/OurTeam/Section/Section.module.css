@@ -21,6 +21,10 @@ hr{
     margin: auto;
 }
 
+.separation hr{
+    width: 70%;
+}
+
 .section .subSection .leads,
 .section .subSection .subteam{
 
@@ -38,6 +42,11 @@ hr{
 .none{
     display: none;
 }
+.iconTag{
+    color: black;
+    position: relative;
+    top:-1px;
+}
 
 .separation .arrow{
 
@@ -48,7 +57,7 @@ hr{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
 
     color: #12274D;
 
