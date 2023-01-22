@@ -119,7 +119,6 @@ export default function Sidebar({auth,setAuth,serverSystemUrl,setUser}) {
           </li>
           <li className="has-subnav">
             <a className="anchor" href="/events">
-              {/* <i className="fa fa-phone fa-2x" /> */}
               <div className="fa fa-2x">
                 <HiOutlineStar size={25} />
               </div>
