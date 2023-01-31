@@ -1,5 +1,15 @@
 /* @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css); */
 /* @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300); */
+
+.activeClassName{
+  /* color: gray !important; */
+  /* background-color: #8080804f !important; */
+  border-left: 2px solid white !important;
+  /* transition: border-left 2s !important; */
+  /* font-size: 1rem !important; */
+  color: white;
+
+}
 .fa-2x {
   font-size: 2em;
 }
@@ -109,7 +119,7 @@ nav.main-menu.expanded {
   border-radius: 16px;
   transform: translateZ(0) scale(1, 1);
   -webkit-transition: all 2s linear;
-  transition: all 2s linear;
+  transition: all 0.4s linear;
   overflow-x: hidden;
 }
 
@@ -211,10 +221,11 @@ nav.main-menu li.active > a,
   transform: scale(1.03);
 }
 .plinth-text{
+  font-family:"Akira" !important;
   opacity: 0.9;
   white-space: nowrap; 
     left:75%;
-    font-size: 19px;
+    font-size: 15px;
     transition: all 0.5s;
 }
 .plinth-text:hover{
@@ -247,8 +258,5 @@ nav.main-menu li.active > a,
   }
   .top-header{
     margin-top: 15px;
-  }
-  .plinth-text{
-    font-size: 20px;
   }
 }
