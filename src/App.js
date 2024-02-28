@@ -8,6 +8,7 @@ import axios from "axios";
 // import CreateTeam from "./components/CreateTeam/CreateTeam";
 import Payment from "./components/Payments/Payment";
 import Events from "./components/Events/Events";
+import { PushNotifications } from '@capacitor/push-notifications';
 
 const Aboutus = lazy(() => import("./components/About/About"));
 const Admin = lazy(() => import("./components/Admin/Admin"));
@@ -23,9 +24,40 @@ const Login = lazy(() => import("./components/Login/Login"));
 const Accomodation = lazy(() => import("./components/Accomodation/Accomodation"));
 
 
+
+
 console.log(process.env.REACT_APP_API_URL);
 const serverSystemUrl= "https://api.plinth.co.in";// 
 function App() {
+  useEffect(() => {
+    const setupPushNotifications = async () => {
+        // Request permission for push notifications
+        await PushNotifications.requestPermissions();
+
+        // Register for push notifications
+        PushNotifications.addListener('registration', (token) => {
+            console.log('Push token:', token.value);
+            // Save the token to your server or use it as needed
+        });
+
+        // Handle received notifications
+        PushNotifications.addListener('pushNotificationReceived', (notification) => {
+            console.log('Push notification received:', notification);
+            // Handle the notification data (e.g., show an alert, navigate to a specific page)
+        });
+
+        // Handle tap on notification
+        PushNotifications.addListener('pushNotificationActionPerformed', (action) => {
+            console.log('Push notification action performed:', action);
+            // Handle the action (e.g., navigate to a specific page)
+        });
+    };
+
+    setupPushNotifications();
+}, []);
+
+
+
   const [loading, setLoading] = useState(false);
   const [auth, setAuth] = useState("false");
   const [userId, setUserId] = useState(null)

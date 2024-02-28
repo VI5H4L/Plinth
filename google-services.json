@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277841838967",
+    "project_id": "plinth-a7e02",
+    "storage_bucket": "plinth-a7e02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277841838967:android:ef9f684ec41d7ea5185772",
+        "android_client_info": {
+          "package_name": "io.ionic.plinth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQPJT487zjB0sOWofbqR5mxu5HSZX89fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
