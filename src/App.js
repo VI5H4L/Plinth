@@ -8,6 +8,8 @@ import axios from "axios";
 // import CreateTeam from "./components/CreateTeam/CreateTeam";
 import Payment from "./components/Payments/Payment";
 import Events from "./components/Events/Events";
+import OneSignal from 'onesignal-cordova-plugin';
+
 
 const Aboutus = lazy(() => import("./components/About/About"));
 const Admin = lazy(() => import("./components/Admin/Admin"));
@@ -26,6 +28,22 @@ const Accomodation = lazy(() => import("./components/Accomodation/Accomodation")
 console.log(process.env.REACT_APP_API_URL);
 const serverSystemUrl= "https://api.plinth.co.in";// 
 function App() {
+   // Remove this method to stop OneSignal Debugging
+   OneSignal.Debug.setLogLevel(6)
+  
+   // Replace YOUR_ONESIGNAL_APP_ID with your OneSignal App ID
+   OneSignal.initialize("aab78d71-2d0d-4303-b1ec-9427fa1c377c");
+ 
+   OneSignal.Notifications.addEventListener('click', async (e) => {
+     let clickData = await e.notification;
+     console.log("Notification Clicked : " + clickData);
+   })
+ 
+   OneSignal.Notifications.requestPermission(true).then((success) => {
+     console.log("Notification permission granted " + success);
+   })
+
+
   const [loading, setLoading] = useState(false);
   const [auth, setAuth] = useState("false");
   const [userId, setUserId] = useState(null)

@@ -1,0 +1,7 @@
+{
+    "name": "Plinth",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Plinth</string>
+    <string name="title_activity_main">Plinth</string>
+    <string name="package_name">io.ionic.Plinth</string>
+    <string name="custom_url_scheme">io.ionic.Plinth</string>
+</resources>
