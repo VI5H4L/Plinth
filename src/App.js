@@ -86,15 +86,12 @@ function App() {
       });
   }, [auth])
 
-  useEffect(() => {
-
-    // console.log((user));
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    // console.log(loading);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 0);
+  // }, []);
 
   console.log(auth);
 
